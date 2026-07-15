@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: music-room
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: OWNER_PASSWORD
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
+    autoDeploy: true
